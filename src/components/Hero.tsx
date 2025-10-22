@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import dieGuysLogo from "@/assets/die-guys-logo.png";
 
 const Hero = () => {
   return (
@@ -15,11 +16,13 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
-              Die Guys
-            </span>
-          </h1>
+          <div className="flex justify-center">
+            <img 
+              src={dieGuysLogo} 
+              alt="Die Guys Logo" 
+              className="w-full max-w-2xl h-auto"
+            />
+          </div>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Holder-Owned IP. Revolutionary tokenomics. Build the future of gaming together.
