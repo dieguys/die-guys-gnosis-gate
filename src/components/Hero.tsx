@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 import dieGuysLogo from "@/assets/die-guys-logo.png";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroBg})`
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
       </div>
 
@@ -17,16 +14,10 @@ const Hero = () => {
       <div className="relative z-10 w-full px-4 py-12 text-center">
         <div className="space-y-6 animate-fade-in">
           <div className="flex justify-center px-4">
-            <img 
-              src={dieGuysLogo} 
-              alt="Die Guys Logo" 
-              className="w-full max-w-[280px] h-auto"
-            />
+            <img src={dieGuysLogo} alt="Die Guys Logo" className="w-full max-w-[280px] h-auto" />
           </div>
           
-          <p className="text-base text-muted-foreground px-6 leading-relaxed">
-            Holder-Owned IP. Revolutionary tokenomics. Build the future of gaming together.
-          </p>
+          <p className="text-base text-muted-foreground px-6 leading-relaxed">Holder-owned IP. Protocol revenue from gaming token flywheel. </p>
 
           <div className="flex flex-col gap-3 px-4 pt-2">
             <Button size="lg" className="w-full text-base py-6 shadow-glow">
@@ -41,8 +32,6 @@ const Hero = () => {
 
       {/* Bottom Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
