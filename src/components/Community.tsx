@@ -27,9 +27,11 @@ const Community = () => {
           <Card className="p-5 bg-gradient-to-br from-primary/5 to-accent/5 border-2">
             <div className="space-y-5">
               <div className="flex flex-col gap-3">
-                <Button size="lg" className="w-full gap-2 py-6">
-                  <span className="text-lg font-bold">𝕏</span>
-                  Follow on X
+                <Button size="lg" className="w-full gap-2 py-6" asChild>
+                  <a href="https://x.com/dieguysgame" target="_blank" rel="noopener noreferrer">
+                    <span className="text-lg font-bold">𝕏</span>
+                    Follow on X
+                  </a>
                 </Button>
                 <Button size="lg" variant="outline" className="w-full gap-2 py-6 border-2">
                   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
