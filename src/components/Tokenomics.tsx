@@ -1,21 +1,41 @@
 import { Card } from "@/components/ui/card";
 import { useScrollFade } from "@/hooks/useScrollFade";
 const tokenomicsData = [{
-  title: "Game Development",
+  title: "Game Dev",
   percentage: "40%",
-  description: "Funding for Web3 and Web2 game creation"
+  description: "Web3 & Web2 creation"
 }, {
   title: "Operations",
   percentage: "25%",
-  description: "Team, marketing, and infrastructure"
+  description: "Team & infrastructure"
 }, {
-  title: "Community Treasury",
+  title: "Treasury",
   percentage: "20%",
-  description: "Governance and community initiatives"
+  description: "Community initiatives"
 }, {
-  title: "Liquidity & Rewards",
+  title: "Liquidity",
   percentage: "15%",
-  description: "Market making and holder incentives"
+  description: "Market & rewards"
+}, {
+  title: "IP Rights",
+  percentage: "100%",
+  description: "Token holder owned"
+}, {
+  title: "Revenue",
+  percentage: "∞",
+  description: "Shared with holders"
+}, {
+  title: "Governance",
+  percentage: "1:1",
+  description: "Token voting power"
+}, {
+  title: "Buyouts",
+  percentage: "Pro-rata",
+  description: "Proportional payouts"
+}, {
+  title: "Royalties",
+  percentage: "Ongoing",
+  description: "From all games"
 }];
 const Tokenomics = () => {
   const {
@@ -34,29 +54,17 @@ const Tokenomics = () => {
           </p>
         </div>
 
-        <div className="space-y-4">
-          {tokenomicsData.map((item, index) => <Card key={index} className="p-5 bg-card/80 backdrop-blur-sm border-2 active:border-accent/50 transition-all duration-200 active:scale-[0.98]">
-              <div className="space-y-2">
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <div className="grid grid-cols-3 gap-3">
+          {tokenomicsData.map((item, index) => <Card key={index} className="p-3 bg-card/80 backdrop-blur-sm border-2 active:border-accent/50 transition-all duration-200 active:scale-[0.98]">
+              <div className="space-y-1.5">
+                <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {item.percentage}
                 </div>
-                <h3 className="text-lg font-semibold">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                <h3 className="text-sm font-semibold leading-tight">{item.title}</h3>
+                <p className="text-xs text-muted-foreground leading-snug">{item.description}</p>
               </div>
             </Card>)}
         </div>
-
-        <Card className="mt-6 p-5 bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20">
-          <div className="space-y-3">
-            <h3 className="text-xl font-bold text-center">The Flywheel Effect</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Every game developed generates revenue that flows back to token holders. 
-              Web3 games utilize unique token flywheels for protocol revenue, while Web2 
-              games share royalties directly with the community. In the event of an IP 
-              buyout, all token holders receive their proportional payout.
-            </p>
-          </div>
-        </Card>
       </div>
     </section>;
 };
