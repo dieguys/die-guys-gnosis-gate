@@ -26,32 +26,34 @@ const features = [
 
 const ValueProps = () => {
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-background to-muted/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+    <section className="py-16 px-4 bg-gradient-to-b from-background to-muted/30">
+      <div className="w-full max-w-md mx-auto">
+        <div className="text-center mb-10 space-y-3 px-2">
+          <h2 className="text-3xl font-bold tracking-tight">
             Why Die Guys?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A revolutionary approach to gaming IP ownership and value creation
+          <p className="text-sm text-muted-foreground">
+            A revolutionary approach to gaming IP ownership
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="space-y-4">
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="p-6 bg-card/50 backdrop-blur-sm border-2 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2"
+              className="p-5 bg-card/50 backdrop-blur-sm border-2 active:border-primary/50 transition-all duration-200 active:scale-[0.98]"
               style={{ boxShadow: 'var(--shadow-card)' }}
             >
-              <div className="space-y-4">
-                <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                  <feature.icon className="h-6 w-6 text-primary-foreground" />
+              <div className="flex gap-4 items-start">
+                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0">
+                  <feature.icon className="h-5 w-5 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-semibold">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="space-y-1.5 flex-1">
+                  <h3 className="text-lg font-semibold leading-tight">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             </Card>
           ))}

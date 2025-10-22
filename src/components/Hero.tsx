@@ -4,35 +4,35 @@ import dieGuysLogo from "@/assets/die-guys-logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
-          <div className="flex justify-center">
+      <div className="relative z-10 w-full px-4 py-12 text-center">
+        <div className="space-y-6 animate-fade-in">
+          <div className="flex justify-center px-4">
             <img 
               src={dieGuysLogo} 
               alt="Die Guys Logo" 
-              className="w-full max-w-2xl h-auto"
+              className="w-full max-w-[280px] h-auto"
             />
           </div>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base text-muted-foreground px-6 leading-relaxed">
             Holder-Owned IP. Revolutionary tokenomics. Build the future of gaming together.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button size="lg" className="text-lg px-8 py-6 shadow-glow hover:shadow-glow-lg transition-all">
+          <div className="flex flex-col gap-3 px-4 pt-2">
+            <Button size="lg" className="w-full text-base py-6 shadow-glow">
               Get Started
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2">
+            <Button size="lg" variant="outline" className="w-full text-base py-6 border-2">
               Learn More
             </Button>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
