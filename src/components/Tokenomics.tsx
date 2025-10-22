@@ -1,58 +1,41 @@
 import { Card } from "@/components/ui/card";
 import { useScrollFade } from "@/hooks/useScrollFade";
-
-const tokenomicsData = [
-  {
-    title: "Game Development",
-    percentage: "40%",
-    description: "Funding for Web3 and Web2 game creation",
-  },
-  {
-    title: "Operations",
-    percentage: "25%",
-    description: "Team, marketing, and infrastructure",
-  },
-  {
-    title: "Community Treasury",
-    percentage: "20%",
-    description: "Governance and community initiatives",
-  },
-  {
-    title: "Liquidity & Rewards",
-    percentage: "15%",
-    description: "Market making and holder incentives",
-  },
-];
-
+const tokenomicsData = [{
+  title: "Game Development",
+  percentage: "40%",
+  description: "Funding for Web3 and Web2 game creation"
+}, {
+  title: "Operations",
+  percentage: "25%",
+  description: "Team, marketing, and infrastructure"
+}, {
+  title: "Community Treasury",
+  percentage: "20%",
+  description: "Governance and community initiatives"
+}, {
+  title: "Liquidity & Rewards",
+  percentage: "15%",
+  description: "Market making and holder incentives"
+}];
 const Tokenomics = () => {
-  const { elementRef, isVisible } = useScrollFade();
-
-  return (
-    <section className="py-16 px-4 relative overflow-hidden">
+  const {
+    elementRef,
+    isVisible
+  } = useScrollFade();
+  return <section className="py-16 px-4 relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5" />
       
-      <div 
-        ref={elementRef}
-        className={`w-full max-w-md mx-auto relative z-10 transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-      >
+      <div ref={elementRef} className={`w-full max-w-md mx-auto relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="text-center mb-10 space-y-3 px-2">
-          <h2 className="text-3xl font-bold tracking-tight">
-            Tokenomics
-          </h2>
+          <h2 className="text-3xl font-bold tracking-tight">Portfolio</h2>
           <p className="text-sm text-muted-foreground">
             Sustainable value creation for all
           </p>
         </div>
 
         <div className="space-y-4">
-          {tokenomicsData.map((item, index) => (
-            <Card
-              key={index}
-              className="p-5 bg-card/80 backdrop-blur-sm border-2 active:border-accent/50 transition-all duration-200 active:scale-[0.98]"
-            >
+          {tokenomicsData.map((item, index) => <Card key={index} className="p-5 bg-card/80 backdrop-blur-sm border-2 active:border-accent/50 transition-all duration-200 active:scale-[0.98]">
               <div className="space-y-2">
                 <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   {item.percentage}
@@ -60,8 +43,7 @@ const Tokenomics = () => {
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         <Card className="mt-6 p-5 bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/20">
@@ -76,8 +58,6 @@ const Tokenomics = () => {
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Tokenomics;
