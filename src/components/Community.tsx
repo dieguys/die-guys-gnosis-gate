@@ -41,9 +41,11 @@ const Community = () => {
                     Join Discord
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="w-full gap-2 py-6 border-2">
-                  <FileText className="h-5 w-5" />
-                  Read Docs
+                <Button size="lg" variant="outline" className="w-full gap-2 py-6 border-2" asChild>
+                  <a href="https://diceguysdocs.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <FileText className="h-5 w-5" />
+                    Read Docs
+                  </a>
                 </Button>
               </div>
 
