@@ -47,13 +47,6 @@ const Tokenomics = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5" />
       
       <div ref={elementRef} className={`w-full max-w-md mx-auto relative z-10 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <div className="text-center mb-10 space-y-3 px-2">
-          <h2 className="text-3xl font-bold tracking-tight">Portfolio</h2>
-          <p className="text-sm text-muted-foreground">
-            Sustainable value creation for all
-          </p>
-        </div>
-
         <div className="grid grid-cols-3 gap-3">
           {tokenomicsData.map((item, index) => <Card key={index} className="p-3 bg-card/80 backdrop-blur-sm border-2 active:border-accent/50 transition-all duration-200 active:scale-[0.98]">
               <div className="space-y-1.5">
