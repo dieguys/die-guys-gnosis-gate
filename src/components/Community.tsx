@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Twitter, MessageCircle, FileText } from "lucide-react";
+import { MessageCircle, FileText } from "lucide-react";
 import { useScrollFade } from "@/hooks/useScrollFade";
 
 const Community = () => {
@@ -28,8 +28,8 @@ const Community = () => {
             <div className="space-y-5">
               <div className="flex flex-col gap-3">
                 <Button size="lg" className="w-full gap-2 py-6">
-                  <Twitter className="h-5 w-5" />
-                  Follow on Twitter
+                  <span className="text-lg font-bold">𝕏</span>
+                  Follow on X
                 </Button>
                 <Button size="lg" variant="outline" className="w-full gap-2 py-6 border-2">
                   <MessageCircle className="h-5 w-5" />
