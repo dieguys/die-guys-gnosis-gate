@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { useScrollFade } from "@/hooks/useScrollFade";
 
 const tokenomicsData = [
   {
@@ -24,12 +25,19 @@ const tokenomicsData = [
 ];
 
 const Tokenomics = () => {
+  const { elementRef, isVisible } = useScrollFade();
+
   return (
     <section className="py-16 px-4 relative overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5" />
       
-      <div className="w-full max-w-md mx-auto relative z-10">
+      <div 
+        ref={elementRef}
+        className={`w-full max-w-md mx-auto relative z-10 transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
         <div className="text-center mb-10 space-y-3 px-2">
           <h2 className="text-3xl font-bold tracking-tight">
             Tokenomics

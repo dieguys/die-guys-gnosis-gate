@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Coins, Gamepad2, TrendingUp, Users } from "lucide-react";
+import { useScrollFade } from "@/hooks/useScrollFade";
 
 const features = [
   {
@@ -25,9 +26,16 @@ const features = [
 ];
 
 const ValueProps = () => {
+  const { elementRef, isVisible } = useScrollFade();
+
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-background to-muted/30">
-      <div className="w-full max-w-md mx-auto">
+      <div 
+        ref={elementRef}
+        className={`w-full max-w-md mx-auto transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
         <div className="text-center mb-10 space-y-3 px-2">
           <h2 className="text-3xl font-bold tracking-tight">
             Why Die Guys?

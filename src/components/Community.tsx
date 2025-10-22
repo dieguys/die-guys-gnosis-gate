@@ -1,11 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Twitter, MessageCircle, FileText } from "lucide-react";
+import { useScrollFade } from "@/hooks/useScrollFade";
 
 const Community = () => {
+  const { elementRef, isVisible } = useScrollFade();
+
   return (
     <section className="py-16 px-4 pb-20 bg-gradient-to-t from-muted/30 to-background">
-      <div className="w-full max-w-md mx-auto">
+      <div 
+        ref={elementRef}
+        className={`w-full max-w-md mx-auto transition-all duration-1000 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
         <div className="text-center space-y-6">
           <div className="space-y-3 px-2">
             <h2 className="text-3xl font-bold tracking-tight">
