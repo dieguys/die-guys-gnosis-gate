@@ -23,8 +23,10 @@ const Hero = () => {
             <Button size="lg" className="w-full text-base py-6 shadow-glow">
               Get Started
             </Button>
-            <Button size="lg" variant="outline" className="w-full text-base py-6 border-2">
-              Learn More
+            <Button size="lg" variant="outline" className="w-full text-base py-6 border-2" asChild>
+              <a href="https://diceguysdocs.vercel.app/" target="_blank" rel="noopener noreferrer">
+                Learn More
+              </a>
             </Button>
           </div>
         </div>
