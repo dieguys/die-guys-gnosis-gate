@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { FileText } from "lucide-react";
+import { FileText, ShoppingBag } from "lucide-react";
 import { useScrollFade } from "@/hooks/useScrollFade";
 
 const Community = () => {
@@ -45,6 +45,12 @@ const Community = () => {
                   <a href="https://diceguysdocs.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <FileText className="h-5 w-5" />
                     Read Docs
+                  </a>
+                </Button>
+                <Button size="lg" variant="outline" className="w-full gap-2 py-6 border-2" asChild>
+                  <a href="https://opensea.io/item/ethereum/0xa6e7bae34683b4d24c311cf9bd1d7150213195d3/390" target="_blank" rel="noopener noreferrer">
+                    <ShoppingBag className="h-5 w-5" />
+                    Trade on OpenSea
                   </a>
                 </Button>
               </div>
