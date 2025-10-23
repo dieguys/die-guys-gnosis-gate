@@ -17,7 +17,7 @@ const Hero = () => {
             <img src={dieGuysLogo} alt="Die Guys Logo" className="w-full max-w-[280px] h-auto" />
           </div>
           
-          <p className="text-base text-muted-foreground px-6 leading-relaxed">Holder-owned IP. Protocol revenue from gaming token flywheel. </p>
+          <p className="text-base text-muted-foreground px-6 leading-relaxed">Gaming IP featuring a collection of animal-themed chibis</p>
 
           <div className="flex flex-col gap-3 px-4 pt-2">
             <Button size="lg" className="w-full text-base py-6 shadow-glow">
